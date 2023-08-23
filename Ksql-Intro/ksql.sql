@@ -24,6 +24,15 @@ GROUP BY symbol ;
 -- Consultar la tabla de resumen,
 SELECT * FROM stock_resume EMIT CHANGES;
 
+-- Consultar el promedio y la cantidad de transacciones por simbolo
+SELECT SIMBOLO, PROMEDIO, CANTIDAD FROM STOCK_RESUME EMIT CHANGES;
+
+-- Consultar el minimo y la cantidad de transacciones por simbolo
+SELECT SIMBOLO, MINIMO, CANTIDAD FROM STOCK_RESUME EMIT CHANGES;
+
+-- Consultar el promedio y la cantidad de transacciones por simbolo
+SELECT SIMBOLO, MAXIMO, CANTIDAD FROM STOCK_RESUME EMIT CHANGES;
+
 -- Eliminar tabla
 DROP TABLE stock_resume;
 
